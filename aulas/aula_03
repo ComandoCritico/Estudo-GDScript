@@ -1,0 +1,29 @@
+# Aula 3: Funções, Parâmetros e Retorno em GDScript
+
+# Função sem parâmetro
+func dizer_ola():
+    print("Olá! Seja bem-vindo à Godot!")
+
+# Função com parâmetros (entrada)
+func somar(a: int, b: int):
+    var resultado = a + b
+    print("A soma é:", resultado)
+
+# Função com retorno (saida)
+func multiplicar(x: int, y: int) -> int:
+    return x * y
+
+# Função principal
+func _ready():
+    dizer_ola()
+
+    # Chamando função com parâmetros
+    somar(3, 7)
+
+    # Chamando função com retorno
+    var produto = multiplicar(4, 5)
+    print("O resultado da multiplicação é:", produto)
+
+    # Podemos até usar diretamente o retorno numa operação
+    var total = multiplicar(2, 10) + 5
+    print("Multiplicação + 5 =", total)
