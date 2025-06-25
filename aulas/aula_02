@@ -1,0 +1,31 @@
+# Aula 2: Condicionais e Estruturas de Repetição em GDScript
+
+# Variáveis simulando entrada de usuário
+var nome: String = "Carlos"
+var idade: int = 17
+
+func _ready():
+    print("Olá,", nome)
+    print("Você tem", idade, "anos.")
+
+    # Condicional com múltiplos caminhos
+    if idade < 12:
+        print("Você é uma criança.")
+    elif idade < 18:
+        print("Você é um adolescente.")
+    else:
+        print("Você é um adulto.")
+
+    # Lista (Array) com dados
+    var frutas = ["Maçã", "Banana", "Laranja", "Uva"]
+
+    print("\nLista de frutas favoritas:")
+    
+    # Estrutura de repetição com for
+    for fruta in frutas:
+        print("- ", fruta)
+
+    # Repetição com índice
+    print("\nListando com índice:")
+    for i in range(frutas.size()):
+        print(str(i + 1) + ":", frutas[i])
