@@ -1,0 +1,60 @@
+# Aula 4: Arrays (Listas) e Dicionários (Mapas) em GDScript
+
+func _ready():
+    # ARRAYS (LISTAS)
+    var frutas = ["Maçã", "Banana", "Laranja"]
+    print("Lista de frutas:", frutas)
+
+    # Acessar item por índice
+    print("Primeira fruta:", frutas[0])
+
+    # Adicionar item
+    frutas.append("Uva")
+    print("Adicionando Uva:", frutas)
+
+    # Remover item
+    frutas.erase("Banana")
+    print("Removendo Banana:", frutas)
+
+    # Alterar item
+    frutas[1] = "Abacaxi"
+    print("Trocando fruta na posição 1:", frutas)
+
+    # Tamanho do array
+    print("Total de frutas:", frutas.size())
+
+    # Percorrer array
+    print("Frutas na lista:")
+    for fruta in frutas:
+        print("- ", fruta)
+
+
+    # DICIONÁRIOS
+    var aluno = {
+        "nome": "Carlos",
+        "idade": 25,
+        "curso": "Godot"
+    }
+
+    print("\nDados do aluno:", aluno)
+
+    # Acessar valores
+    print("Nome:", aluno["nome"])
+    print("Curso:", aluno["curso"])
+
+    # Alterar valor
+    aluno["idade"] = 26
+    print("Nova idade:", aluno["idade"])
+
+    # Adicionar nova chave
+    aluno["nota_final"] = 9.5
+    print("Nota final:", aluno["nota_final"])
+
+    # Verificar se chave existe
+    if "nota_final" in aluno:
+        print("Nota registrada com sucesso!")
+
+    # Percorrer todas as chaves e valores
+    print("\nResumo dos dados do aluno:")
+    for chave in aluno.keys():
+        print(chave + ":", aluno[chave])
